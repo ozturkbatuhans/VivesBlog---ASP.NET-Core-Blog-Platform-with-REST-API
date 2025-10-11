@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VivesBlog.Model\VivesBlog.Model.csproj" />
+    <ProjectReference Include="..\VivesBlog.Repository\VivesBlog.Repository.csproj" />
+    <ProjectReference Include="..\VivesBlog.Services\VivesBlog.Services.csproj" />
+  </ItemGroup>
+
+</Project>

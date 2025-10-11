@@ -1,0 +1,27 @@
+﻿@using static VivesBlog.Model.Dto.ArticleDto
+@model dynamic
+@{
+    var authors = (IList<VivesBlog.Model.Dto.PersonDto>)ViewBag.Authors;
+}
+
+<div asp-validation-summary="ModelOnly"></div>
+
+<div class="mb-3">
+    <label for="Title" class="form-label">Title</label>
+    <input name="Title" value="@Model?.Title" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="Content" class="form-label">Content</label>
+    <textarea name="Content" class="form-control">@Model?.Content</textarea>
+</div>
+<div class="mb-3">
+    <label for="AuthorId" class="form-label">Author</label>
+    <select name="AuthorId" class="form-control">
+        @foreach (var author in authors)
+        {
+            <option value="@author.Id" selected="@(Model?.AuthorId == author.Id)">
+                @author.FirstName @author.LastName
+            </option>
+        }
+    </select>
+</div>
