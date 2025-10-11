@@ -6,35 +6,6 @@ A full-stack blog management system built with ASP.NET Core, featuring a clean R
 
 This project demonstrates a complete transformation of a monolithic MVC application into a modern, API-driven architecture. The application manages blog articles and authors with full CRUD operations, implementing industry-standard patterns and best practices.
 
-## Architecture
-
-The project follows a layered architecture pattern:
-      ┌─────────────────────────────────────────┐
-      │         VivesBlog.UI.Presentation       │  ← MVC Web Application
-      └────────────────┬────────────────────────┘
-      │ HTTP Requests
-      ↓
-      ┌─────────────────────────────────────────┐
-      │           VivesBlog.Sdk                 │  ← SDK Library
-      └────────────────┬────────────────────────┘
-      │ HTTP Client
-      ↓
-      ┌─────────────────────────────────────────┐
-      │           VivesBlog.Api                 │  ← REST API
-      └────────────────┬────────────────────────┘
-      │
-      ┌────────────────┴────────────────────────┐
-      │        VivesBlog.Services               │  ← Business Logic
-      └────────────────┬────────────────────────┘
-      │
-      ┌────────────────┴────────────────────────┐
-      │        VivesBlog.Repository             │  ← Data Access
-      └────────────────┬────────────────────────┘
-      │
-      ┌────────────────┴────────────────────────┐
-      │        VivesBlog.Model                  │  ← Domain Models & DTOs
-      └─────────────────────────────────────────┘
-
 ## Features
 
 ### Core Functionality
