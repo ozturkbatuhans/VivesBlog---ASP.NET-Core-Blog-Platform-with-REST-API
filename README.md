@@ -33,7 +33,7 @@ This project demonstrates a complete transformation of a monolithic MVC applicat
 ### Installation
 1. **Clone the repository**
   ```
-   git clone https://github.com/yourusername/VivesBlog.git
+   git clone <url>
    cd VivesBlog
    dotnet restore
 ```
